@@ -8,7 +8,7 @@ import { color } from "framer-motion";
 
 const Recedencies = () => {
   return (
-    <section className="r-wrapper">
+    <section className="r-wrapper" id="recedencies">
       <div className="paddings innerWidth r-container">
         <div className="r-head flexColStart">
           <span className="orangeText">Best Choices</span>
