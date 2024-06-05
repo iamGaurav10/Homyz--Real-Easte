@@ -11,18 +11,31 @@ import {
   AccordionItemPanel,
   AccordionItemState,
 } from "react-accessible-accordion";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../utils/Variants";
 
 const Value = () => {
   return (
-    <section className="v-wrapper" id="value">
+    <section className="v-wrapper">
       <div className="paddings innerWidth flexCenter v-container">
         {/* left-side */}
-        <div className="image-container">
+        <motion.div
+          variants={fadeIn("right", 0)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.9 }}
+          className="image-container"
+        >
           <img src="./value.png" alt="" />
-        </div>
+        </motion.div>
 
         {/* right-side */}
-        <div className="flexColStart v-right">
+        <motion.div
+        variants={fadeIn("left", 0)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.9 }}
+        className="flexColStart v-right">
           <span className="orangeText">Our Value</span>
           <span className="primaryText">Value WE Provide</span>
           <span className="secondaryText">
@@ -37,9 +50,13 @@ const Value = () => {
             preExpanded={[0]}
           >
             {data.map((item, i) => {
-                const[className,setClassName]= useState(null)
+              const [className, setClassName] = useState(null);
               return (
-                <AccordionItem className={`accordionItem ${className}`} key={i} uuid={i}>
+                <AccordionItem
+                  className={`accordionItem ${className}`}
+                  key={i}
+                  uuid={i}
+                >
                   <AccordionItemHeading>
                     <AccordionItemButton className="accordionButton  flexCenter">
                       <AccordionItemState>
@@ -65,7 +82,7 @@ const Value = () => {
               );
             })}
           </Accordion>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
