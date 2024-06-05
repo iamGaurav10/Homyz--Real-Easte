@@ -25,8 +25,8 @@ const Header = () => {
           <div className=" flexCenter h-menu" style={getMenuStyled(menuOpened)}>
             <Link to="recedencies">Residencies</Link>
             <Link to="v-wrapper">Value</Link>
-            <Link to="">Contact Us</Link>
-            <Link to="">Get Started</Link>
+            <Link to="contact">Contact Us</Link>
+            <Link to="getStarted">Get Started</Link>
             <button className="button">
               <a href="">Contact</a>
             </button>
