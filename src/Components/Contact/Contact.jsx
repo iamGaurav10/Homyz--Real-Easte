@@ -8,7 +8,7 @@ import { fadeIn } from "../../utils/Variants";
 
 const Contact = () => {
   return (
-    <section className="c-wrapper">
+    <motion.section className="c-wrapper">
       <div
         className="paddings innerWidth flexCenter c-container"
         id="contactUsNavLink"
@@ -124,7 +124,7 @@ const Contact = () => {
           </div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

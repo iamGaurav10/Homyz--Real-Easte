@@ -16,7 +16,7 @@ import { fadeIn } from "../../utils/Variants";
 
 const Value = () => {
   return (
-    <section className="v-wrapper">
+    <motion.section className="v-wrapper">
       <div className="paddings innerWidth flexCenter v-container">
         {/* left-side */}
         <motion.div
@@ -84,7 +84,7 @@ const Value = () => {
           </Accordion>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
